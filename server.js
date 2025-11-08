@@ -21,7 +21,7 @@ app.use(paymentMiddleware(
   {
     "GET /api/data": {  // Your protected endpoint
       price: "$0.01",   // Price in USD
-      network: "base-sepolia",  // Use "base" for mainnet
+      network: "base",  // Use "base" for mainnet
     },
   },
   {

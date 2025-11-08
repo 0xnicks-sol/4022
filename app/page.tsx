@@ -67,7 +67,8 @@ export default function Home() {
       setPaymentStatus('✅ Payment confirmed! Fetching content...');
 
       // Step 3: Fetch the paid content from API
-      const response = await fetch('http://localhost:3001/api/data', {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'https://four022.onrender.com/';
+      const response = await fetch(`${apiUrl}/api/data`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
